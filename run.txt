@@ -1,0 +1,2 @@
+python finetune_math23k.py --data_dir ./data/math23k --tokenizer_path ./data/tokenizer_gpt2 --pretrained_ckpt ./checkpoints/best.pt --save_dir ./data/math23k_ckpt --prediction_file ./data/math23k_predictions.jsonl --block_size 128 --max_length 128 --n_layer 12 --n_head 12 --n_embd 768 --n_inner 3072 --epochs 5 --batch_size 16 --eval_batch_size 32 --lr 6.25e-5 --weight_decay 0.01 --warmup_ratio 0.002 --grad_clip 1.0 --max_new_tokens 32 --temperature 1.0 --top_k 20 --val_ratio 0.1 --split_seed 42 --seed 42
+device = cuda

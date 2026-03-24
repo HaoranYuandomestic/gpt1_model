@@ -1,0 +1,8 @@
+torch
+datasets
+transformers
+tokenizers
+sentencepiece
+pyyaml
+tqdm
+numpy

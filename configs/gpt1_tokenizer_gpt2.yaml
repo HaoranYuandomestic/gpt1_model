@@ -1,0 +1,38 @@
+data:
+  source: local
+  local_text_dir: ./data/pretrain
+  text_column: text
+  tokenizer_path: ./data/tokenizer_gpt2
+  cache_dir: null
+  max_texts: null
+  add_eos_between_texts: true
+  valid_ratio: 0.01
+
+model:
+  vocab_size: auto
+  block_size: 128
+  n_layer: 12
+  n_head: 12
+  n_embd: 768
+  n_inner: 3072
+  embd_pdrop: 0.1
+  resid_pdrop: 0.1
+  attn_pdrop: 0.1
+  layer_norm_epsilon: 1.0e-5
+  bias: true
+
+train:
+  seed: 42
+  epochs: 10
+  batch_size: 16
+  eval_batch_size: 16
+  lr: 2.5e-4
+  weight_decay: 0.01
+  betas: [0.9, 0.999]
+  eps: 1.0e-8
+  warmup_steps: 1000
+  grad_clip: 1.0
+  log_interval: 100
+  num_workers: 0
+  pin_memory: false
+  checkpoint_dir: ./checkpoints/gpt1_tokenizer_gpt2
